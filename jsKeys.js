@@ -34,11 +34,11 @@ function keyReleased(evt){
   else if(evt.keyCode == 40||evt.keyCode==83){
       downKeyPressed = false;
   }
-  else{
-    key = "none";
-  }
 }
 function playerMove(){
+    if(!downKeyPressed&&!upKeyPressed&&!leftKeyPressed&&!rightKeyPressed){
+      key = "none"
+    }
     if(leftKeyPressed){
       left()
     }
